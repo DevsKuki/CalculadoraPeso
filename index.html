@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Calculadora de Peso</title>
+</head>
+
+<body class="bg-blue-200 flex justify-center items-center min-h-screen p-4">
+    <div class="max-w-md w-full items-center">
+        
+        <div class="bg-white p-8 rounded-2xl shadow-lg border-4 border-purple-400 animate__animated animate__fadeIn">
+            <h1 class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text animate__animated animate__pulse animate__infinite">Calculadora BMI</h1>
+            
+           
+            <div class="space-y-6">
+                <div class="transform transition-all duration-300 hover:scale-105">
+                    <label for="weight" class="block text-lg font-medium text-purple-600 mb-2">Peso (Kg)</label>
+                    <input type="number" id="weight" class="w-full p-3 border-2 border-purple-300 rounded-lg focus:border-purple-500 focus:ring focus:ring-purple-200 transition-all" placeholder="Ejemplo: 68">
+                </div>
+                
+                <div class="transform transition-all duration-300 hover:scale-105">
+                    <label for="height" class="block text-lg font-medium text-purple-600 mb-2">Altura (cm)</label>
+                    <input type="number" id="height" class="w-full p-3 border-2 border-purple-300 rounded-lg focus:border-purple-500 focus:ring focus:ring-purple-200 transition-all" placeholder="Ejemplo: 170">
+                </div>
+            </div>
+
+           
+            <button onclick="calculateBMI()" class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg mt-8 transform transition-all duration-300 hover:scale-105 hover:shadow-lg animate__animated animate__pulse animate__infinite">
+                Calcular
+            </button>
+
+            <p id="result" class="mt-6 text-xl font-semibold text-center text-purple-600 animate__animated animate__fadeIn"></p>
+        </div>
+
+        
+        <div class="mt-8 bg-white rounded-2xl shadow-lg overflow-x-auto animate__animated animate__fadeInUp">
+            <table id="imcTabla" class="w-full">
+                <thead class="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+                    <tr>
+                        <th class="px-6 py-4 text-left text-sm font-semibold">Categoría</th>
+                        <th class="px-6 py-4 text-left text-sm font-semibold">IMC</th>
+                        <th class="px-6 py-4 text-left text-sm font-semibold">Descripción</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
